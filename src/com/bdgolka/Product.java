@@ -1,6 +1,19 @@
 package com.bdgolka;
 
+import java.util.Comparator;
+
 public class Product {
+	//Java 8 Lambda expressions
+	//public static final Comparator<Product> BY_WEIGHT = comparing(Product::getWeight);
+
+	public static final Comparator<Product> BY_WEIGHT =
+			new Comparator<Product>() {
+				@Override
+				public int compare(final Product p1, final Product p2) {
+					return Integer.compare(p1.getWeight(), p2.getWeight());
+				}
+			};
+
 
 	private final String name;
 	private final int weight;
