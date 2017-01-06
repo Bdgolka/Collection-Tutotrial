@@ -17,6 +17,7 @@ public class ProductFixtures {
         bobs.products().add(floorPanel);
 
         kates.products().add(floorPanel);
+        kates.products().add(window);
         kates.products().add(new Product("Wooden door", 35));
         //new Product ("Wooden door", 35)
     }

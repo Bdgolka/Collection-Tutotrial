@@ -17,7 +17,28 @@ public class ProductCatalogueTest {
         catalogue.isSuppliedBy(bobs);
         catalogue.isSuppliedBy(kates);
 
-        assertThat(catalogue, containsInAnyOrder(door, floorPanel));
+        assertThat(catalogue, containsInAnyOrder(door, floorPanel, window));
     }
 
+    @Test
+    public void shouldFindLightVanProduct() throws Exception{
+
+        ProductCatalogue catalogue = new ProductCatalogue();
+
+        catalogue.isSuppliedBy(bobs);
+        catalogue.isSuppliedBy(kates);
+
+        assertThat(catalogue.lightVanProducts(), containsInAnyOrder(window));
+    }
+
+    @Test
+    public void shouldFindHeavyVanProduct() throws Exception{
+
+        ProductCatalogue catalogue = new ProductCatalogue();
+
+        catalogue.isSuppliedBy(bobs);
+        catalogue.isSuppliedBy(kates);
+
+        assertThat(catalogue.heavyVanProducts(), containsInAnyOrder(door, floorPanel));
+    }
 }
