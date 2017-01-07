@@ -19,21 +19,28 @@ public class Product {
 
 	public static final Comparator<Product> BY_NAME = comparing(Product::getName);
 
+	private final int id;
 	private final String name;
 	private final int weight;
 	
-	
 	public Product(String name, int weight) {
+		id = 0;
+		this.name = name;
+		this.weight = weight;
+	}
+
+	public Product(String name, int weight,int  id) {
+		this.id = id;
 		this.name = name;
 		this.weight = weight;
 	}
 
 
+    //Geters
 	public String getName() {
 		return name;
 	}
-
-
+	public int getId() { return id; }
 	public int getWeight() {
 		return weight;
 	}

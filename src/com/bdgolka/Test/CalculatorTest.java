@@ -1,5 +1,6 @@
-package com.bdgolka;
+package com.bdgolka.Test;
 
+import com.bdgolka.Calculator;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
